@@ -8,9 +8,11 @@
 
 import * as React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import { GlobalStyle } from 'styles/global-styles';
+import NavigationBar from './components/navigation-bar';
+import AllRoutes from './routes';
 
 export function App() {
   return (
@@ -21,11 +23,8 @@ export function App() {
       >
         <meta name="description" content="A React Boilerplate application" />
       </Helmet>
-
-      <Routes>
-        <Route path="/" element={<h1>home</h1>} />
-        <Route element={<h2>hello</h2>} />
-      </Routes>
+      <NavigationBar />
+      <AllRoutes />
       <GlobalStyle />
     </Router>
   );
