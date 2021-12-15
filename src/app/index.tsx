@@ -6,6 +6,7 @@
  * contain code that should be seen on all pages. (e.g. navigation bar)
  */
 
+import { Container } from '@mui/material';
 import * as React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -24,7 +25,9 @@ export function App() {
         <meta name="description" content="A React Boilerplate application" />
       </Helmet>
       <NavigationBar />
-      <AllRoutes />
+      <Container>
+        <AllRoutes />
+      </Container>
       <GlobalStyle />
     </Router>
   );
